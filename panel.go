@@ -392,6 +392,10 @@ type Target struct {
 
 	// For InfluxDB
 	Measurement string `json:"measurement,omitempty"`
+	GroupBy     []struct {
+		Type   string   `json:"type,omitempty"`
+		Params []string `json:"params,omitempty"`
+	} `json:"groupBy,omitempty"`
 
 	// For Elasticsearch
 	DsType  *string `json:"dsType,omitempty"`
